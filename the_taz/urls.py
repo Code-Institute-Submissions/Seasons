@@ -20,12 +20,12 @@ from taz.views import get_index, get_menu,get_reservation,get_voucher,get_contac
 
 
 urlpatterns = [
+    url(r'', include("blog.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
     url(r'menu/', get_menu, name='menu'),
     url(r'reservation/', get_reservation, name='reservation'),
     url(r'voucher/', get_voucher, name='voucher'),
-
     url(r'contact/', get_contact, name='contact'),
     url(r'opening/', get_opening, name='opening'),
     url(r'location/', get_location, name='location'),

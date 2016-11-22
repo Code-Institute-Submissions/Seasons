@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'stripe',
     'arrow',
     'test_app',
+    'blog',
+    'django.contrib.sites',
+    'disqus'
 ]
 
 MIDDLEWARE = [
@@ -127,14 +130,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+# IMAGE_ROOT = os.path.join(BASE_DIR, 'image')
+# IMAGE_URL = '/image/'
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-IMAGE_ROOT = os.path.join(BASE_DIR, 'image')
-IMAGE_URL = '/image/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
 )
+DISQUS_WEBSITE_SHORTNAME='mybootcampblog'
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<replace this with your stripe publishable code>')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<replace this with your stripe secret code>')
