@@ -17,10 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import views as accounts_views
 from taz.views import get_index, get_menu,get_reservation,get_voucher,get_contact,get_opening,get_location
+from products import urls as products_urls
 
 
 urlpatterns = [
-    url(r'', include("blog.urls")),
+    url(r'^', include("blog.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
     url(r'menu/', get_menu, name='menu'),
@@ -34,5 +35,6 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
+    url(r'^products/', include(products_urls)),
 
 ]
