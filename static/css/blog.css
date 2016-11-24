@@ -8,3 +8,19 @@
     transition: all 2s ease;
 
 }
+#carousel-example-generic{
+    position: relative;
+    display: inline-block;
+    margin-left: 115px!important;
+}
+
+/*.header{*/
+    /*width:100%;*/
+
+/*}*/
+/*.first ul li a{*/
+    /*display: inline-block!important;*/
+     /*text-decoration: none;*/
+     /*font-family: roboto;*/
+     /*color: #fff;*/
+/*}*/

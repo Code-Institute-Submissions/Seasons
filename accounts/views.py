@@ -12,6 +12,9 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from models import User
+from forms import ContactForm, ReservationForm
+from django.core.mail import BadHeaderError,send_mail
+
 
 stripe.api_key = settings.STRIPE_SECRET
 
@@ -92,41 +95,41 @@ def logout(request):
 stripe.api_key = settings.STRIPE_SECRET
 
 
-def register(request):
-    if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
-        if form.is_valid():
-            try:
-                customer = stripe.Customer.create(
-                    email=form.cleaned_data['email'],
-                    card=form.cleaned_data['stripe_id'],  # this is currently the card token/id
-                    plan='REG_MONTHLY',
-                )
-            except stripe.error.CardError, e:
-                messages.error(request, "Your card was declined!")
-
-            if customer:
-                user = form.save()
-                user.stripe_id = customer.id
-                user.subscription_end = arrow.now().replace(weeks=+4).datetime
-                user.save()
-            if user:
-                auth.login(request, user)
-                messages.success(request, "You have successfully registered")
-                return redirect(reverse('profile'))
-            else:
-                messages.error(request, "unable to log you in at this time!")
-        else:
-            messages.error(request, "We were unable to take a payment with that card!")
-
-    else:
-        today = datetime.date.today()
-        form = UserRegistrationForm()
-
-        args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
-        args.update(csrf(request))
-
-        return render(request, 'register.html', args)
+# def register(request):
+#     if request.method == 'POST':
+#         form = UserRegistrationForm(request.POST)
+#         if form.is_valid():
+#             try:
+#                 customer = stripe.Customer.create(
+#                     email=form.cleaned_data['email'],
+#                     card=form.cleaned_data['stripe_id'],  # this is currently the card token/id
+#                     plan='REG_MONTHLY',
+#                 )
+#             except stripe.error.CardError, e:
+#                 messages.error(request, "Your card was declined!")
+#
+#             if customer:
+#                 user = form.save()
+#                 user.stripe_id = customer.id
+#                 user.subscription_end = arrow.now().replace(weeks=+4).datetime
+#                 user.save()
+#             if user:
+#                 auth.login(request, user)
+#                 messages.success(request, "You have successfully registered")
+#                 return redirect(reverse('profile'))
+#             else:
+#                 messages.error(request, "unable to log you in at this time!")
+#         else:
+#             messages.error(request, "We were unable to take a payment with that card!")
+#
+#     else:
+#         today = datetime.date.today()
+#         form = UserRegistrationForm()
+#
+#         args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
+#         args.update(csrf(request))
+#
+#         return render(request, 'register.html', args)
 
 
 @login_required(login_url='/login/')
@@ -155,3 +158,44 @@ def subscriptions_webhook(request):
     except stripe.InvalidRequestError, e:
         return HttpResponse(status=404)
     return HttpResponse(status=200)
+
+
+def get_contact(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['vishaldara01@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('thanks')
+    return render(request, "contacts.html", {'form': form})
+
+
+def thanks(request):
+    return render(request, 'thanks.html')
+
+
+def get_reservation(request):
+    if request.method == 'GET':
+        form = ReservationForm()
+    else:
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['vishaldara01@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('thanks')
+    return render(request, "reservation.html", {'form': form})
+
+def booking(request):
+    return render(request, 'booking.html')

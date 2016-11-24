@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'disqus',
     'products',
+    'payment',
 
 ]
 
@@ -136,8 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-# IMAGE_ROOT = os.path.join(BASE_DIR, 'image')
-# IMAGE_URL = '/image/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -150,3 +150,10 @@ DISQUS_WEBSITE_SHORTNAME='mybootcampblog'
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<replace this with your stripe publishable code>')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<replace this with your stripe secret code>')
+
+EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'vishaldara01@gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025

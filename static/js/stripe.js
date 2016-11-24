@@ -2,7 +2,7 @@
  * Created by Vishal on 21/11/2016.
  */
 $(function() {
-  $("#register-form").submit(function() {
+  $("#payment-form").submit(function() {
       var form = this;
       var card = {
         number:   $("#id_credit_card_number").val(),
@@ -12,7 +12,8 @@ $(function() {
       };
 
       $("#validate_card_btn").attr("disabled", true);
-       Stripe.createToken(card, function(status, response) {
+
+      Stripe.createToken(card, function(status, response) {
         if (status === 200) {
           console.log(status, response);
           $("#credit-card-errors").hide();
