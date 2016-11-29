@@ -32,4 +32,17 @@ def get_location(request):
     return render(request, 'location.html')
 
 
+def get_breakfast(request):
+    return render(request, 'Breakfast-menu.html')
 
+
+def get_lunch(request):
+    return render(request, 'Lunch.html')
+
+
+def get_dinner(request):
+    return render(request, 'dinner.html')
+
+
+def get_dessert(request):
+    return render(request, 'dessert.html')

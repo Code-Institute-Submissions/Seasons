@@ -1,3 +1,4 @@
+
 from django.conf.urls import url
 import views
 from django.views.static import serve

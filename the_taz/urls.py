@@ -16,13 +16,14 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import views as accounts_views
-from taz.views import get_index, get_menu,get_reservation,get_voucher,get_contact,get_opening,get_location
+from taz.views import get_index, get_menu,get_lunch,get_voucher,get_breakfast,get_opening,get_location,get_dinner,get_dessert
 from products import urls as products_urls
 from payment import urls as payment_urls
+from blog import views
 
 
 urlpatterns = [
-    url(r'^', include("blog.urls")),
+    url(r'', include("blog.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
     url(r'menu/', get_menu, name='menu'),
@@ -39,6 +40,10 @@ urlpatterns = [
     url(r'^products/', include(products_urls)),
     url(r'^payments/', include(payment_urls)),
     url(r'^thanks/', accounts_views.thanks, name='thanks'),
-    url(r'^thanks/', accounts_views.booking, name='booking'),
+    url(r'^booking/', accounts_views.booking, name='booking'),
+    url(r'lunch/', get_lunch, name='lunch'),
+    url(r'dinner/', get_dinner, name='dinner'),
+    url(r'dessert/', get_dessert, name='dessert'),
+    url(r'breakfast/', get_breakfast, name='breakfast'),
 
 ]

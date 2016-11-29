@@ -1,5 +1,5 @@
 /**
- * Created by Vishal on 21/11/2016.
+ * Created by Vishal on 27/11/2016.
  */
 $(function() {
   $("#payment-form").submit(function() {

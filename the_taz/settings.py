@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'disqus',
     'products',
     'payment',
+    'gravatar'
 
 ]
 
