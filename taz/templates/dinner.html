@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 {% block content %}
         <div class="container">
 
@@ -69,7 +70,7 @@
 										<dt>Pomme Dulse</dt>
 										<dd>Baked potatoes with crisped dulse</dd>
 
-										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="../static/images/1.jpg">Green Love Crostini</a></dt>
+										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb ="{% static 'images/1.jpg'%}">Green Love Crostini</a></dt>
 										<dd>Crostini with young pecorino, grilled figs and arugula &amp; mint pesto</dd>
 
 										<dt>Focaccia di Carciofi</dt>
@@ -81,7 +82,7 @@
 										<dt>Green Delight</dt>
 										<dd>Watercress, frisee and avocado salad</dd>
 
-										<dt><a href="http://herbivoracious.com/2010/02/thai-tofu-salad-recipe.html" class="rm-viewdetails" data-thumb="../staticimages/13.jpg">Gourmet Yam Taohu</a></dt>
+										<dt><a href="http://herbivoracious.com/2010/02/thai-tofu-salad-recipe.html" class="rm-viewdetails" data-thumb="../static/images/13.jpg">Gourmet Yam Taohu</a></dt>
 										<dd>Thai tofu salad yam taohu</dd>
 
 										<dt>Panini Deluxe</dt>
@@ -99,7 +100,7 @@
 								<div class="rm-content">
 									<h4>Main Courses</h4>
 									<dl>
-										<dt><a href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html" class="rm-viewdetails" data-thumb="../static/images/11.jpg">Crispy Gnocchi with Arugula</a></dt>
+										<dt><a href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html" class="rm-viewdetails" data-thumb="{% static 'images/11.jpg' %}">Crispy Gnocchi with Arugula</a></dt>
 										<dd>Pan-fried potato gnocchi with arugula salad</dd>
 
 										<dt>Sea Palm Spicy Peanut Curry</dt>

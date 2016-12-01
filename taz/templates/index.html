@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static from staticfiles %}
 {% block content %}
     <div class="container-2">
         <div class="row">
@@ -16,18 +16,18 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active" style="align-content: center;">
-                    <img src="../../static/images/slider-1.jpg" alt="1" style="margin-left: 14%;">
+                    <img src="{% static 'images/slider-1.jpg'%}" alt="1" style="margin-left: 14%;">
                     <div class="carousel-caption">
 
                     </div>
                 </div>
                 <div class="item"style="align-content: center;">
-                    <img src="../../static/images/slider-2.jpg" alt="2">
+                    <img src="{% static 'images/slider-2.jpg' %}" alt="2">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item 3" style="align-content: center;">
-                    <img src="../../static/images/slider-3.jpg" alt="3">
+                    <img src="{% static 'images/slider-3.jpg' %}" alt="3">
                     <div class="carousel-caption">
 
                     </div>
@@ -71,13 +71,13 @@ Seasons Restaurant may be booked for private events, offering two private dining
         </div>
         <div class="col-sm-6">
             <div class="img-sec">
-                <img src="../../static/images/bbig8.jpg" style="width: 250px; height: 250px;">
+                <img src="{% static 'images/bbig8.jpg' %}" style="width: 250px; height: 250px;">
 
-                <img src="../../static/images/bbig9.jpg" style="width: 250px; height: 250px;">
+                <img src="{% static 'images/bbig9.jpg' %}" style="width: 250px; height: 250px;">
 
-                <img src="../../static/images/big2.jpg" style="width: 250px; height: 250px;">
+                <img src="{% static 'images/big2.jpg' %}" style="width: 250px; height: 250px;">
 
-                <img src="../../static/images/bbig1.jpg" style="width: 250px; height: 250px;">
+                <img src="{% static 'images/bbig1.jpg' %}" style="width: 250px; height: 250px;">
 
                 </div>
             </div>
