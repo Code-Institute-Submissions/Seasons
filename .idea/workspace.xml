@@ -4,8 +4,8 @@
     <list default="true" id="c34d126a-785e-486e-a54d-28538acdf1ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taz/templates/dinner.html" afterPath="$PROJECT_DIR$/taz/templates/dinner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taz/templates/header-user-dropdown.html" afterPath="$PROJECT_DIR$/taz/templates/header-user-dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taz/templates/index.html" afterPath="$PROJECT_DIR$/taz/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/voucher.html" afterPath="$PROJECT_DIR$/templates/voucher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/the_taz/settings.py" afterPath="$PROJECT_DIR$/the_taz/settings.py" />
     </list>
     <ignored path="the_taz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +19,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/the_taz$Test__blog_tests_PostTests_test_str.coverage" NAME="Test: blog.tests.PostTests.test_str Coverage Results" MODIFIED="1479830740781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/the_taz$settings.coverage" NAME="settings Coverage Results" MODIFIED="1480608904800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/the_taz" />
+    <SUITE FILE_PATH="coverage/the_taz$settings.coverage" NAME="settings Coverage Results" MODIFIED="1480610717318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/the_taz" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -81,6 +81,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="voucher.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/voucher.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
+              <folding>
+                <element signature="e#580#626#0#HTML" expanded="true" />
+                <element signature="e#723#766#0#HTML" expanded="true" />
+                <element signature="e#1859#1903#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="blogposts.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blogposts.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,21 +105,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/the_taz/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <folding>
+                <element signature="e#311#320#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taz/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="voucher.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/voucher.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="77" column="81" selection-start-line="77" selection-start-column="81" selection-end-line="77" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -121,16 +137,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="56" column="2" selection-start-line="55" selection-start-column="16" selection-end-line="56" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taz/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dinner.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dinner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taz/templates/dinner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="2610">
+              <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
               <folding>
                 <element signature="e#1663#1687#0#HTML" expanded="true" />
               </folding>
@@ -206,7 +212,6 @@
         <option value="$PROJECT_DIR$/templates/products.html" />
         <option value="$PROJECT_DIR$/products/models.py" />
         <option value="$PROJECT_DIR$/templates/blogposts.html" />
-        <option value="$PROJECT_DIR$/templates/voucher.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="dbtable:/8774d3c6/ab37a157-94d3-4eab-bc62-8f443fdc743a/accounts_post" />
         <option value="$PROJECT_DIR$/templates/reservation.html" />
@@ -218,10 +223,11 @@
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/the_taz/settings.py" />
         <option value="$PROJECT_DIR$/taz/templates/index.html" />
         <option value="$PROJECT_DIR$/taz/templates/header-user-dropdown.html" />
         <option value="$PROJECT_DIR$/taz/templates/dinner.html" />
+        <option value="$PROJECT_DIR$/templates/voucher.html" />
+        <option value="$PROJECT_DIR$/the_taz/settings.py" />
       </list>
     </option>
   </component>
@@ -1091,28 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/the_taz/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="188" column="74" selection-start-line="188" selection-start-column="74" selection-end-line="188" selection-end-column="74" />
-          <folding>
-            <element signature="e#311#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taz/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/voucher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="77" column="81" selection-start-line="77" selection-start-column="81" selection-end-line="77" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -1129,14 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
           <caret line="105" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taz/templates/dessert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1158,14 +1138,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/booking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taz/templates/Breakfast-menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1221,12 +1193,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/taz/templates/dessert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-393">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taz/templates/Breakfast-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/taz/templates/dinner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="2610">
+          <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding>
             <element signature="e#1663#1687#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/voucher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
+          <folding>
+            <element signature="e#580#626#0#HTML" expanded="true" />
+            <element signature="e#723#766#0#HTML" expanded="true" />
+            <element signature="e#1859#1903#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/the_taz/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="e#311#320#0" expanded="true" />
           </folding>
         </state>
       </provider>

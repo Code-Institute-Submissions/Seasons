@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 {% block content %}
 
     <div class="container">
@@ -17,7 +18,7 @@
         <div class="row">
             <div class="col-md-7">
 
-                <img class="img-responsive" src="../static/images/voucher1.jpg" alt="Afternoon-Tea" style="width: 700px; height: 400px!important;">
+                <img class="img-responsive" src="{% static 'images/voucher1.jpg'%}" alt="Afternoon-Tea" style="width: 700px; height: 400px!important;">
                 </a>
             </div>
             <div class="col-md-5">
@@ -37,7 +38,7 @@
         <div class="row">
             <div class="col-md-7">
                 <!-- <a href="#"> -->
-                <img class="img-responsive" src="../static/images/voucher2.jpg" alt="Afternoon"style="width: 700px; height: 400px!important;">
+                <img class="img-responsive" src="{% static 'images/voucher2.jpg'%}" alt="Afternoon"style="width: 700px; height: 400px!important;">
                 </a>
 
             </div>
@@ -71,7 +72,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="../static/images/voucher3.jpg" alt="" style="width: 700px; height: 400px!important;">
+                    <img class="img-responsive" src="{% static 'images/voucher3.jpg'%}" alt="" style="width: 700px; height: 400px!important;">
                 </a>
             </div>
             <div class="col-md-5">
@@ -95,7 +96,7 @@
 
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="../static/images/voucher5.png" alt="" style="width: 700px; height: 400px!important;">
+                    <img class="img-responsive" src="{% static 'images/5.jpg'%}" alt="" style="width: 700px; height: 400px!important;">
                 </a>
             </div>
             <div class="col-md-5">
