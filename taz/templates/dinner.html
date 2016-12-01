@@ -1,58 +1,179 @@
 {% extends 'base.html' %}
-{% load bootstrap_tags %}
-{% block content  %}
+{% block content %}
+        <div class="container">
 
-<div id="top" class="dinner_container bg" style="text-align: center;">
-    <div class="dinner_text">
+			<!-- Codrops top bar -->
+{#            <div class="codrops-top">#}
+{#                #}
+{#                <span class="right">#}
+{#                	<a href="http://www.flickr.com/photos/hisgett/369087090/sizes/m/in/photostream/">Restaurant image by ahisgett</a>#}
+{#                    <a href="http://tympanus.net/codrops/?p=11029">#}
+{#                        <strong>Back to the Codrops Article</strong>#}
+{#                    </a>#}
+{#                </span>#}
+{#            </div><!--/ Codrops top bar -->#}
 
-        <h2><b>Season’s Restaurant</b></h2>
-        <h3><b>DUBLIN</b></h3><br>
-        <h3><b>DINNER MENU</b></h3>
+			<header>
 
-        <h3><b>STARTERS</b></h3><br>
-        <h4><b>Cauliflower & Chervil Soup - €9</b></h4>
-        <h5>Shaved Florets, Buerre Noisette</h5>
-        <h4><b>Silver Darlings - €10</b></h4>
-        <h5>Smoked Yogurt, White Onion, Apple Compressed Cucumber</h5>
-        <h4><b>Harty Oyster Collection - €13</b></h4>
-        <h5>Pork Skin, Lime Crystals, Beetroot & Orange, Mignonette, Chilli & Lime</h5>
-        <h4><b>Salmon & Avocado Ceviche - €13</b></h4>
-        <h5>Red Shallot, Pickled Radish Carpaccio, Brioche Crumb</h5>
-        <h4><b>Sweet Potato Spaghetti - €10</b></h4>
-        <h5>Basil Leaf, Cured Tomato & Greek Feta</h5>
-        <h4><b>Seared Scallop - €13</b></h4>
-        <h5>Black Parmesan, Lemon Gel, Crispy Capers & Roe Powder</h5>
-        <h4><b>Add a matching glass of wine to your starter - €11.00 (18.75cl)</b></h4><br>
-            <h4><b>MAINS</b></h4><br>
-            <h4><b>Taste of Pork - €22</b></h4>
-            <h5>Crisp Belly, Ham Hock Croquet & Clonakilty Pudding Soil, Apple Vanilla, Red Onion Crisps</h5>
-            <h4><b>Ailsbury Duck Breast, Carrot & Orange - €24</b></h4>
-            <h5>Sweet Carrot Puree, Orange & Cardamom, Baby Carrot Tops, Foie Gras & Orange Jus</h5>
-            <h4><b>Caramelized Celeriac & Goats Curd - €18</b></h4>
-            <h5>Charred Baby Gem, Carrot Ribbons & Polenta Crumble</h5>
-            <h4><b>Ring of Kerry Lamb - €21</b></h4>
-            <h5>Seared Loin, Braised Shoulder, Leek 3 Ways, Burnt Cauliflower, Merlot Glaze</h5>
-            <h4><b>Sous Vide of Irish Monkfish - €26</b></h4>
-            <h5>Shiitake Mushrooms, Pickled Red Cabbage, Blackened Corn& Crisp Sprout</h5><br><br>
-            <h4><b>8oz Striploin of Irish Beef - €28</b></h4>
-            <h5>Potato Fondant, Spinach Purée, Baby Carrots</h5>
-            <h4><b>Grilled 6oz Fillet of Irish Beef - €32</b></h4>
-            <h5>Colcannon, Baby Irish Vegetables</h5>
-            <h4><b>Add a matching glass of wine to your main course - €13.00 (18.75cl)</b></h4>
-            <h4><b>The Mojito - €12</b></h4>
-            <h4><b>Soufflé of the day - €9</b></h4><br>
-            <p><h5>At Season's Restaurant Dublin, we consciously purchase our food from sustainable <br>sources, and we
-                support local growers and producers
-                Where possible. <br>The best quality meat and fish is hand-selected by our team of chefs from Irish <br>farms
-                and harbours.
-                Certain items on our menu may contain allergens or trace allergens,<br> which may cause an allergic
-                reaction. If you have an allergy,<br>
-                or need any assistance with our menu,please contact a member of our team.</h5></p><br><br>
+				<h1>Celler's Restaurant <br>Dinner Menu</h1>
 
 
+				<div class="support-note"><!-- let's check browser support with modernizr -->
+					<span class="no-cssanimations">CSS animations are not supported in your browser</span>
+					<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+					<span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span>
+					<span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+
+			</header>
+
+			<section class="main">
+
+				<div id="rm-container" class="rm-container">
+
+					<div class="rm-wrapper">
+
+						<div class="rm-cover">
+
+							<div class="rm-front">
+								<div class="rm-content">
+
+									<div class="rm-logo"></div>
+									<h2>Celler's Restaurant</h2>
+									<h3>Fine Dining &amp; </h3>
+
+									<a href="#" class="rm-button-open">View the Menu</a>
+									<div class="rm-info">
+										<p style="font-size: 12px;">
+										<strong>Celler's Restaurant</strong><br>
+										43 Dame Street<br>
+										Dublin 2<br>
+										<strong>Phone</strong> 01.123.4567<br>
+										<strong>Fax</strong> 01.456.7890</p>
+									</div>
+
+								</div><!-- /rm-content -->
+							</div><!-- /rm-front -->
+
+							<div class="rm-back">
+								<div class="rm-content">
+									<h4>Appetizers</h4>
+									<dl>
+										<dt>Bella's Artichokes</dt>
+										<dd>Roasted artichokes with chipotle aioli and cream cheese</dd>
+
+										<dt>Bruschetta Blue Delight</dt>
+										<dd>Blue cheese and citrus bruschetta</dd>
+
+										<dt>Pomme Dulse</dt>
+										<dd>Baked potatoes with crisped dulse</dd>
+
+										<dt><a href="http://herbivoracious.com/2011/11/crostini-with-young-pecorino-grilled-figs-and-arugula-mint-pesto-recipe.html" class="rm-viewdetails" data-thumb="../static/images/1.jpg">Green Love Crostini</a></dt>
+										<dd>Crostini with young pecorino, grilled figs and arugula &amp; mint pesto</dd>
+
+										<dt>Focaccia di Carciofi</dt>
+										<dd>Artichoke focaccia with fresh thyme</dd>
+									</dl>
+
+									<h4>Salads &amp; More</h4>
+									<dl>
+										<dt>Green Delight</dt>
+										<dd>Watercress, frisee and avocado salad</dd>
+
+										<dt><a href="http://herbivoracious.com/2010/02/thai-tofu-salad-recipe.html" class="rm-viewdetails" data-thumb="../staticimages/13.jpg">Gourmet Yam Taohu</a></dt>
+										<dd>Thai tofu salad yam taohu</dd>
+
+										<dt>Panini Deluxe</dt>
+										<dd>Buffalo mozzarella basil panini</dd>
+									</dl>
+								</div><!-- /rm-content -->
+								<div class="rm-overlay"></div>
+
+							</div><!-- /rm-back -->
+
+						</div><!-- /rm-cover -->
+
+						<div class="rm-middle">
+							<div class="rm-inner">
+								<div class="rm-content">
+									<h4>Main Courses</h4>
+									<dl>
+										<dt><a href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html" class="rm-viewdetails" data-thumb="../static/images/11.jpg">Crispy Gnocchi with Arugula</a></dt>
+										<dd>Pan-fried potato gnocchi with arugula salad</dd>
+
+										<dt>Sea Palm Spicy Peanut Curry</dt>
+										<dd>Tender sea palm noodles, seasoned vegetables, spicy peanut curry and tempeh fenel croquettes</dd>
+
+										<dt><a href="http://herbivoracious.com/2012/09/caviar-lentil-salad-with-arugula-crispy-shallots-and-roasted-garlic-recipe.html" class="rm-viewdetails" data-thumb="../static/images/8.jpg">Lentil Caviar &amp; Arugula</a></dt>
+										<dd>Black lentil curry with arugula salad, caramelized shallots and roasted garlic</dd>
+
+										<dt>Tamari-Maple Glazed Tofu</dt>
+										<dd>Wasabi emulsion, sesame seeds and scallions</dd>
+
+										<dt>Maple Barbeque Tofu</dt>
+										<dd>Grilled marinated tofu, maple barbeque sauce, tahini slaw, grilled seasonal vegetables and mashed potatoes</dd>
+
+										<dt><a href="http://herbivoracious.com/2012/07/king-oyster-mushroom-with-roasted-cherries-and-sage-no-that-isnt-meat-recipe-and-thought-process.html" class="rm-viewdetails" data-thumb="../static/images/4.jpg">Luxur Oyster</a></dt>
+										<dd>King oyster mushroom with roasted cherries and sage</dd>
+
+										<dt><a href="http://herbivoracious.com/2012/09/rigatoni-with-roasted-cauliflower-and-spicy-tomato-sauce-recipe.html" class="rm-viewdetails" data-thumb="../static/images/3.jpg">Rigatoni di Cavolfiore</a></dt>
+										<dd>Rigatoni with roasted cauliflower and spicy tomato sauce</dd>
+
+										<dt><a href="http://herbivoracious.com/2012/06/saffron-chickpea-stew-with-grilled-porcini-mushroom-recipe.html" class="rm-viewdetails" data-thumb="../static/images/14.jpg">Saffron Chana Secret</a></dt>
+										<dd>Saffron chickpea stew with grilled porcini mushrooms</dd>
+									</dl>
+								</div><!-- /rm-content -->
+								<div class="rm-overlay"></div>
+							</div><!-- /rm-inner -->
+						</div><!-- /rm-middle -->
+
+						<div class="rm-right">
+
+							<div class="rm-front">
+
+							</div>
+
+							<div class="rm-back">
+								<span class="rm-close">Close</span>
+								<div class="rm-content">
+									<h4>Desserts</h4>
+									<dl>
+										<dt><a href="http://herbivoracious.com/2012/08/crepes-with-roasted-french-plums-yogurt-and-honey.html" class="rm-viewdetails" data-thumb="../static/images/5.jpg">French Plum Crepes</a></dt>
+										<dd>Crepes with roasted french plums, yogurt &amp; honey</dd>
+
+										<dt><a href="http://herbivoracious.com/2012/05/butterscotch-pudding-with-bittersweet-ganache-and-caramelize-white-chocolate-crunchies-recipe.html" class="rm-viewdetails" data-thumb="../static/images/6.jpg">Butterscotch Pudding</a></dt>
+										<dd>Butterscotch pudding with bittersweet ganache and caramelize white chocolate crispies</dd>
+
+										<dt><a href="http://herbivoracious.com/2009/12/gateaux-de-crepes-recipe.html" class="rm-viewdetails" data-thumb="../static/images/12.jpg">Chocolate Gâteau de Crêpes</a></dt>
+										<dd>Gâteau de crêpes with chocolate pastry cream and dulce de leche</dd>
+
+										<dt><a href="http://herbivoracious.com/2009/05/dutch-baby-with-sauteed-apples-giant-ovenbaked-pancakes-recipe.html" class="rm-viewdetails" data-thumb="../static/images/10.jpg">Dutch Baby With Sauteed Apples</a></dt>
+										<dd>Dutch ginat oven-baked pancakes with sauteed apples</dd>
+
+										<dt><a href="http://herbivoracious.com/2008/08/blueberry-napol.html" class="rm-viewdetails" data-thumb="../static/images/7.jpg">Blueberry Napoleon</a></dt>
+										<dd>Blueberry Napoleon with crème fraîche and raspberry powder</dd>
+
+										<dt><a href="http://herbivoracious.com/2008/09/rings-of-saturn.html" class="rm-viewdetails" data-thumb="../static/images/2.jpg">Rings of Saturn</a></dt>
+										<dd>Saturn peach on challah french toast</dd>
+
+										<dt><a href="http://herbivoracious.com/2008/04/recipe-atayef.html" class="rm-viewdetails" data-thumb="../static/images/9.jpg">Classic Atayef</a></dt>
+										<dd>Syrian ricotta-filled dessert pancakes</dd>
+									</dl>
+									<div class="rm-order">
+										<p style="font-size: 14px;"><strong>Would you like us to cater your event?</strong> Call us &amp; we'll help you find a venue and organize the event: <strong>01.123.4567</strong></p>
+									</div>
+								</div><!-- /rm-content -->
+							</div><!-- /rm-back -->
+
+						</div><!-- /rm-right -->
+					</div><!-- /rm-wrapper -->
+
+				</div><!-- /rm-container -->
+
+			</section>
 
         </div>
-</div>
+		<!-- jQuery if needed -->
 
-<!--=====================Footer==================-->
 {% endblock %}

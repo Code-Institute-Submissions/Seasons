@@ -122,38 +122,38 @@ h5{
 }
 h4{
     font-size: 22px;
-    color: red;
-}
-
-.breakfast_text{
-    background-image: url("../../static/images/bbig9.jpg");
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px white;
 
 }
-.dinner_text{
-     background-image: url("../../static/images/gallery-1-big.jpg");
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px white;
 
-}
-.lunch_text{
-     background-image: url("../../static/images/slide03.jpg");
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px white;
+/*.breakfast_text{*/
+    /*background-image: url("../../static/images/bbig9.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*text-shadow: 2px 2px 5px white;*/
 
-}
+/*}*/
+/*.dinner_text{*/
+     /*background-image: url("../../static/images/gallery-1-big.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*text-shadow: 2px 2px 5px white;*/
+
+/*}*/
+/*.lunch_text{*/
+     /*background-image: url("../../static/images/slide03.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*text-shadow: 2px 2px 5px white;*/
+
+/*}*/
 .lunch_text h4{
     color: black;
 }
 .dessert_text{
-     background-image: url("../../static/images/big2.jpg");
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px white;
+     /*background-image: url("../../static/images/big2.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*text-shadow: 2px 2px 5px white;*/
 
 }
 

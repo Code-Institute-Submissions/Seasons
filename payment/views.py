@@ -17,8 +17,8 @@ def make_payment(request):
             try:
                 customer = stripe.Charge.create(
                     amount=499,
-                    currency="USD",
-                    description='From Richard',
+                    currency="EUR",
+                    description='From Vishal',
                     card=form.cleaned_data['stripe_id'],
                 )
             except stripe.error.CardError, e:

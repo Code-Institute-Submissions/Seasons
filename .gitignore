@@ -1,6 +1,5 @@
-*.pyc
-*.php
-*.gif
 .idea
+*.pyc
+custom_storages.pyc
 .DS_Store
 db.sqlite3

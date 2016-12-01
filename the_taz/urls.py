@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import views as accounts_views
-from taz.views import get_index, get_menu,get_lunch,get_voucher,get_breakfast,get_opening,get_location,get_dinner,get_dessert
+from taz.views import get_index, get_menu,get_lunch,get_voucher,get_breakfast,get_opening,get_location,get_dinner,get_dessert,get_base
 from products import urls as products_urls
 from payment import urls as payment_urls
 from blog import views
@@ -45,5 +45,6 @@ urlpatterns = [
     url(r'dinner/', get_dinner, name='dinner'),
     url(r'dessert/', get_dessert, name='dessert'),
     url(r'breakfast/', get_breakfast, name='breakfast'),
+    url(r'base/', get_base, name='breakfast'),
 
 ]

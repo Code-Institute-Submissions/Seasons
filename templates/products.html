@@ -1,22 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
     <table class="table table-striped">
+
         <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Description</th>
+            <tr style="font-size: 15px">
+                <th></th>
+                <th></th>
+                <th></th>
                 <th>Price</th>
+                <th>Buy Now</th>
             </tr>
         </thead>
         <tbody>
             {% for product in products %}
                 <tr>
-                    <td><img  src="{{ MEDIA_URL }}{{ product.image }}" class="products-img"></td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>${{ product.price }}</td>
-                <td><a href="{% url 'make_payment_stripe' %}">Buy Now</a></td>
+                    <td style="font-size: 15px"><img style="width:200px; height: 200px;" src="{{ MEDIA_URL }}{{ product.image }}" class="products-img"></td>
+                    <td style="font-size: 15px">{{ product.name }}</td>
+                    <td style="font-size: 15px" width="750px">{{ product.description }}</td>
+                    <td style="font-size: 15px">€{{ product.price }}</td>
+{#                    <button class="btn btn-default" onclick="location.href={% url 'make_payment_stripe' %}">Pay Now </button>#}
+                <td style="font-size: 15px"><a href="{% url 'make_payment_stripe' %}">Buy Now</a></td>
                 </tr>
             {% endfor %}
         </tbody>

@@ -75,19 +75,19 @@ class UserLoginForm(forms.Form):
 
 class ContactForm(forms.Form):
 
-    first_name = forms.CharField(required=True)
+    First_Name = forms.CharField(required=True)
     Last_Name = forms.CharField(required=True)
-    from_email = forms.EmailField(required=True)
-    subject = forms.CharField(required=True)
-    message = forms.CharField(widget=forms.Textarea)
+    Email = forms.EmailField(required=True)
+    Subject = forms.CharField(required=True)
+    Message = forms.CharField(widget=forms.Textarea)
 
 
 class ReservationForm(forms.Form):
-    first_name = forms.CharField(required=True)
-    last_name = forms.CharField(required=True)
+    name = forms.CharField(required=True)
+    surname = forms.CharField(required=True)
     from_email = forms.EmailField(required=True)
-    telephone = forms.CharField(required=True)
     date = forms.DateField(widget=SelectDateWidget)
+    telephone = forms.CharField(required=True)
     time = forms.TimeField(required=True)
     guests = forms.IntegerField(required=True)
 

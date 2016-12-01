@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <head>
     <title>The Celler's Restaurant</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="font awesome" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/profile.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="../static/js/modernizr.custom.79639.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.css">
     <link rel="stylesheet" href="{% static "css/blog.css" %}">
     <link rel="stylesheet" href="{% static "css/nav.css" %}">
@@ -9,8 +15,8 @@
 </head>
 <body>
 <div class="container">
-    <h1 style="text-align: center"><a href="https://www.script-tutorials.com/css3-responsive-menu/">Celler's
-        Restaurant</a></h1>
+    {#    <h1 style="text-align: center; font-family: cursive;"><a href="https://www.script-tutorials.com/css3-responsive-menu/">Celler's#}
+    {#        Restaurant</a></h1>#}
     <ul id="nav">
 
 
@@ -38,7 +44,7 @@
 
         <li><a href="{% url 'reservation' %}">Reservation</a></li>
 
-        <li><a href="{%  url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
 
         <li><a href="{% url 'opening' %}">Opening Time</a></li>
 
@@ -48,7 +54,7 @@
             <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
-            <li><a href="{%  url 'register' %}">Register</a></li>
+{#            <li><a href="{% url 'register' %}">Register</a></li>#}
             <li><a href="{% url 'login' %}">Login</a></li>
         {% endif %}
 
@@ -56,6 +62,9 @@
     </ul>
 
 </div>
+<h1 style="text-align: center; font-family: cursive;color: #06040d;font-size: 60px;"><a href="{% url 'index' %}"><span>Celler's
+        Restaurant</span><br><h4 style="text-align: center; font-family: cursive;"><span>Best In Dublin</span></h4></a>
+</h1>
 
 <div class="container">
     <div class="row">
@@ -71,13 +80,51 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="container">
+<footer style="background-color: #e2d5cb;">
+    <div class="container" style="width: 100%; text-align: center; font-size: 15px;">
+         <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/vishaldara" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://myaccount.google.com/?utm_source=OGB&pli=1" target="_blank">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://www.facebook.com/vishal.dara" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                     <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://www.linkedin.com/in/vishal-dara-0b40052b?trk=hp-identity-name" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+
+                </div>
+        <br>
+        <div class="col-md-4">
+            <p class="sub-footer-text text-center"><a href="{% url 'index' %}" target="_blank">
+                <spam class="footer-name" style="font-size: 30px; font-family: cursive;"> Celler's Restaurant</spam>
+            </a></p>
+        </div>
+        <div class="col-md-4"><p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p>
+        </div>
+        <div class="col-md-4"><p class="sub-footer-text text-center"><a href="#" target="_blank">
+            ©2016 The Celler's Restaurant All Rights Reserved |<br><br> web development by Dara's Digital</a></p>
+        </div>
     </div>
 </footer>
 <!-- script references -->
 <script src="../static/js/stripe.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/menu.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        Menu.init();
+
+    });
+</script>
 </body>
 </html>

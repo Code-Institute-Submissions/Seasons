@@ -46,3 +46,7 @@ def get_dinner(request):
 
 def get_dessert(request):
     return render(request, 'dessert.html')
+
+
+def get_base(request):
+    return render(request, 'base.html')

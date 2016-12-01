@@ -1,22 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
-    <p>Your stripe id is {{ user.stripe_id }} </p>
-    <h2>Subscription Details</h2>
-    <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
-    <p>To cancel your subscription click 'Cancel Subscription' below</p>
-    <p>
-        <a href="{% url "cancel_subscription" %}"
-           onclick="return cancelSubscriptionCheck();"
-           class="btn btn-danger">Cancel Subscription</a>
-    </p>
-    <script type="text/javascript">
-        function cancelSubscriptionCheck() {
-            if (confirm('Are you sure you want to cancel?')) {
-                return true;
-            }
-            return false;
-        }
-    </script>
+   <div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-sm-6">
+
+            <div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="../static/images/vish.jpg"><br><br>
+                </div>
+                <div class="info">
+                    <div class="title" style="font-size: 20px;">
+                        <a target="_blank" href="#">Vishal Dara</a>
+                    </div><br><br>
+                    <div class="desc" style="font-size: 18px;">Head Chef</div><br><br>
+                    <div class="desc" style="font-size: 18px;">Celler's Restauurant</div>
+
+                </div><br><br>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/vishaldara" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://myaccount.google.com/?utm_source=OGB&pli=1" target="_blank">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://www.facebook.com/vishal.dara" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                     <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://www.linkedin.com/in/vishal-dara-0b40052b?trk=hp-identity-name" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+	</div>
+</div>
 {% endblock %}
