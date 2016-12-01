@@ -17,3 +17,4 @@ python-dateutil==2.6.0
 requests==2.12.1
 six==1.10.0
 stripe==1.42.0
+MYSQL-python==1.2.5
