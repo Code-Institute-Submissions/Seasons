@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     'disqus',
     'products',
     'payment',
-    'gravatar',
-    'storages'
+    'django_gravatar',
+    'storages',
 
 ]
 

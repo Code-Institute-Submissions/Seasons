@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-
+{% load static from staticfiles %}
 {% block content %}
 {% block head_js %}{% endblock %}
     <div class="row">
         <div class="col-xs-9">
             {% if post.image %}
-                <img src="/media/{{ post.image }}"
+                <img src="{% media %} {{ post.image }}"
                      style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
             {% endif %}
             <p>{{ post.content|linebreaks }}</p>
