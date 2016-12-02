@@ -194,8 +194,9 @@ def get_reservation(request):
             time = form.cleaned_data['time']
             telephone = form.cleaned_data['telephone']
             guests = form.cleaned_data['guests']
+            return redirect('thanks')
             try:
-                send_mail(name, surname, from_email,date,time,telephone,guests, ['vishaldara01@gmail.com'])
+                # send_mail(name, surname, from_email,date,time,telephone,guests, ['vishaldara01@gmail.com'])
                 form.save()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
