@@ -176,7 +176,7 @@ AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', '')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 
-# STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
 )
