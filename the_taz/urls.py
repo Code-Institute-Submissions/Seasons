@@ -25,7 +25,7 @@ from django.views.static import serve
 from django.conf import settings
 
 urlpatterns = [
-    url(r'blog/', include(blog_urls)),
+    url(r'^blog/', include(blog_urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
     url(r'menu/', get_menu, name='menu'),
