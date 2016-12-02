@@ -21,6 +21,8 @@ from taz.views import get_index, get_menu, get_lunch, get_voucher, get_breakfast
 from products import urls as products_urls
 from payment import urls as payment_urls
 from blog import urls as blog_urls
+from django.views.static import serve
+from django.conf import settings
 
 urlpatterns = [
     url(r'blog/', include(blog_urls)),
@@ -46,5 +48,6 @@ urlpatterns = [
     url(r'dessert/', get_dessert, name='dessert'),
     url(r'breakfast/', get_breakfast, name='breakfast'),
     url(r'base/', get_base, name='breakfast'),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_URL}),
 
 ]
