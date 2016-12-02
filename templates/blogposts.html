@@ -40,12 +40,12 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-md-2 new_post_button">
-                <p><button class="btn btn-primary" onclick="location.href='{% url 'new_post' %}'">New Post</button></p>
-                <p><button id="ajaxPost" class="btn btn-primary" onclick="">Ajax Post</button></p>
-            </div>
-        </div>
+{#        <div class="row">#}
+{#            <div class="col-md-2 new_post_button">#}
+{#                <p><button class="btn btn-primary" onclick="location.href='{% url 'new_post' %}'">New Post</button></p>#}
+{#                <p><button id="ajaxPost" class="btn btn-primary" onclick="">Ajax Post</button></p>#}
+{#            </div>#}
+{#        </div>#}
     </div>
     {% for post in posts %}
         <div class="row">
