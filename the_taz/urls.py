@@ -23,7 +23,7 @@ from blog import views
 
 
 urlpatterns = [
-    url(r'', include("blog.urls")),
+    url(r'^blog/', include("blog.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
     url(r'menu/', get_menu, name='menu'),
