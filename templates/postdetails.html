@@ -11,7 +11,7 @@
             <p>{{ post.content|linebreaks }}</p>
             <p>
                 <button class="btn btn-default"
-                        onclick="location.href={{ blog }}">Back to Blog
+                        onclick="location.href={% url 'blog' %}">Back to Blog
                 </button>
             </p>
         </div>
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-xs-9">
 
-                    <button class="btn btn-default" onclick="location.href={{ blog }}">Back To Blog</button>
+                    <button class="btn btn-default" onclick="location.href= {%  url 'blog'%}">Back To Blog</button>
                     {{ post.published_date }} | <strong>Views</strong> {{ post.views }} |
                     <strong>Tag</strong> {{ post.tag }}
                     {% load disqus_tags %}
