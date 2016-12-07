@@ -73,12 +73,13 @@ body {
 
 }
 
-ul li ul li{
+ul li ul li {
     padding-top: 10px;
     font-size: 20px;
 }
+
 /*.carousel-inner>.item>img, .carousel-inner>.item>a>img{*/
-    /*margin-left: 14%!important;*/
+/*margin-left: 14%!important;*/
 /*}*/
 
 #nav ul.subs {
@@ -101,9 +102,7 @@ ul li ul li{
 
     width: 10%;
 
-    height: auto;
-
-    padding-top: 2px;
+    height: 126px;
 
 }
 

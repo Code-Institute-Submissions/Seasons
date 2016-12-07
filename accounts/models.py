@@ -5,6 +5,7 @@ from django.utils import timezone
 
 
 
+
 # Create your models here.
 
 
@@ -35,8 +36,10 @@ class User(AbstractUser):
 class Reservation(models.Model):
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=20)
-    email = models.EmailField(default=timezone.now)
+    email = models.EmailField(max_length=254, blank=False, unique=True,
+        error_messages={'required': 'Please provide your email address.',
+                        'unique': 'An account with this email exist.'},)
     date = models.DateField(blank=True, null=True)
     time = models.TimeField(default=0)  # Record how often a post is seen
-    telephone= models.CharField(max_length=10)
+    telephone= models.CharField(max_length=12)
     guests= models.IntegerField()

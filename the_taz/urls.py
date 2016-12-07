@@ -25,6 +25,7 @@ from django.views.static import serve
 from django.conf import settings
 
 urlpatterns = [
+    url(r'^payment/', include(payment_urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='index'),
@@ -40,7 +41,7 @@ urlpatterns = [
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
     url(r'^products/', include(products_urls)),
-    url(r'^payments/', include(payment_urls)),
+    # url(r'^payments/', include(payment_urls)),
     url(r'^thanks/', accounts_views.thanks, name='thanks'),
     # url(r'^booking/', accounts_views.booking, name='booking'),
     url(r'lunch/', get_lunch, name='lunch'),

@@ -1,27 +1,25 @@
 {% extends "base.html" %}
-{% load static from staticfiles %}
-
 {% block content %}
     <table class="table table-striped">
-
         <thead>
-            <tr style="font-size: 15px">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Price</th>
-                <th>Buy Now</th>
+            <tr>
+                <th style="font-size: 18px;">Image</th>
+                <th style="font-size: 18px;">Name</th>
+                <th style="font-size: 18px;">Description</th>
+                <th style="font-size: 18px;">Price</th>
+                <th style="font-size: 18px;">Buy</th>
+{#                <th style="font-size: 18px;">Cart</th>#}
             </tr>
         </thead>
         <tbody>
             {% for product in products %}
                 <tr>
-                    <td style="font-size: 15px"><img style="width:200px; height: 200px;" src="{{ MEDIA_URL }}{{ product.image }}" class="products-img"></td>
-                    <td style="font-size: 15px">{{ product.name }}</td>
-                    <td style="font-size: 15px" width="750px">{{ product.description }}</td>
-                    <td style="font-size: 15px">€{{ product.price }}</td>
-{#                    <button class="btn btn-default" onclick="location.href={% url 'make_payment_stripe' %}">Pay Now </button>#}
-                <td style="font-size: 15px"><a href="{% url 'make_payment_stripe' %}">Buy Now</a></td>
+                    <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></td>
+                    <td style="font-size: 18px;">{{ product.name }}</td>
+                    <td style="font-size: 16px;">{{ product.description }}</td>
+                    <td style="font-size: 18px;">{{ product.price }}</td>
+                    <td style="font-size: 18px;"><a href="{% url 'buy_now_stripe' product.id %}">Buy Now</a></td>
+{#                    <td><a href="{% url 'add_to_cart' product.id %}")>Add To Cart</a></td>#}
                 </tr>
             {% endfor %}
         </tbody>

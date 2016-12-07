@@ -2,7 +2,6 @@ from django import forms
 
 
 class MakePaymentForm(forms.Form):
-
     MONTH_CHOICES = [(i, i,) for i in xrange(1, 12)]
     YEAR_CHOICES = [(i, i,) for i in xrange(2015, 2036)]
 
