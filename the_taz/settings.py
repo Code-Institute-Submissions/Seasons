@@ -96,11 +96,11 @@ WSGI_APPLICATION = 'the_taz.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
+
 
 
 # Password validation
@@ -192,5 +192,5 @@ MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 #
-# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL")
-# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL")
+DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
