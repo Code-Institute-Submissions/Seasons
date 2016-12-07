@@ -33,7 +33,7 @@ def get_location(request):
 
 
 def get_breakfast(request):
-    return render(request, 'Breakfast-menu.html')
+    return render(request, 'Breakfast.html')
 
 
 def get_lunch(request):

@@ -42,12 +42,12 @@ urlpatterns = [
     url(r'^products/', include(products_urls)),
     url(r'^payments/', include(payment_urls)),
     url(r'^thanks/', accounts_views.thanks, name='thanks'),
-    url(r'^booking/', accounts_views.booking, name='booking'),
+    # url(r'^booking/', accounts_views.booking, name='booking'),
     url(r'lunch/', get_lunch, name='lunch'),
     url(r'dinner/', get_dinner, name='dinner'),
     url(r'dessert/', get_dessert, name='dessert'),
     url(r'breakfast/', get_breakfast, name='breakfast'),
-    url(r'base/', get_base, name='breakfast'),
+    # url(r'base/', get_base, name='breakfast'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_URL}),
 
 ]

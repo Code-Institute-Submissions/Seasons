@@ -101,6 +101,10 @@ ul li ul li{
 
     width: 10%;
 
+    height: auto;
+
+    padding-top: 2px;
+
 }
 
 #nav > li {

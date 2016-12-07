@@ -2,9 +2,10 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from accounts.models import User
 from django.core.exceptions import ValidationError
-import datetime
-from django.forms.extras.widgets import SelectDateWidget
-from django.forms import ModelForm, Form
+# import datetime
+# from django.forms.extras.widgets import SelectDateWidget
+# from django.forms import ModelForm, Form
+from models import Reservation
 
 class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(
@@ -82,12 +83,8 @@ class ContactForm(forms.Form):
     Message = forms.CharField(widget=forms.Textarea)
 
 
-class ReservationForm(forms.Form):
-    name = forms.CharField(required=True)
-    surname = forms.CharField(required=True)
-    from_email = forms.EmailField(required=True)
-    date = forms.DateField(widget=SelectDateWidget)
-    telephone = forms.CharField(required=True)
-    time = forms.TimeField(required=True)
-    guests = forms.IntegerField(required=True)
+class ReservationForm(forms.ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ('name', 'surname', 'email', 'date', 'time', 'telephone', 'guests')
 

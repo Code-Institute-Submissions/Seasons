@@ -13,8 +13,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from models import User
 from forms import ContactForm, ReservationForm
-from django.core.mail import BadHeaderError,send_mail
-
+from django.core.mail import BadHeaderError, send_mail
 
 stripe.api_key = settings.STRIPE_SECRET
 
@@ -182,26 +181,19 @@ def thanks(request):
 
 
 def get_reservation(request):
-    if request.method == 'GET':
-        form = ReservationForm()
-    else:
+    if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            surname = form.cleaned_data['surname']
-            from_email = form.cleaned_data['from_email']
-            date = form.cleaned_data['date']
-            time = form.cleaned_data['time']
-            telephone = form.cleaned_data['telephone']
-            guests = form.cleaned_data['guests']
-            return redirect('thanks')
-            try:
-                # send_mail(name, surname, from_email,date,time,telephone,guests, ['vishaldara01@gmail.com'])
-                form.save()
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('thanks')
-    return render(request, "reservation.html", {'form': form})
+            form.save()
+            return render(request, 'booking.html')
+    else:
+        form = ReservationForm()
 
-def booking(request):
-    return render(request, 'booking.html')
+    args = {'form': form}
+    args.update(csrf(request))
+
+    return render(request, 'reservation.html', args)
+
+
+# def booking(request):
+#     return render(request, 'booking.html')
