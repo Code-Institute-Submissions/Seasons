@@ -12,11 +12,12 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required(login_url="/login?next=payments/buy_now")
 def buy_now(request, id):
+    product = get_object_or_404(Product, pk=id)
     if request.method == 'POST':
         form = MakePaymentForm(request.POST)
         if form.is_valid():
             try:
-                product = get_object_or_404(Product, pk=id)
+                # product = get_object_or_404(Product, pk=id)
                 customer = stripe.Charge.create(
                     amount= int(product.price * 100),
                     currency="EUR",
